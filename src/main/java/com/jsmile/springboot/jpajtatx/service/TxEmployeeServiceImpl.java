@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jsmile.springboot.jpajtatx.entity.Employee;
+import com.jsmile.springboot.jpajtatx.entity.identity.Employee;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -52,9 +52,15 @@ public class TxEmployeeServiceImpl implements TxEmployeeService
 	@Transactional( readOnly = false, propagation = Propagation.REQUIRED, transactionManager = "multiTxManager" )
 	public void save( Employee theEmployee ) throws RuntimeException
 	{
+		com.jsmile.springboot.jpajtatx.entity.sequence.Employee sequenceEmployee = new com.jsmile.springboot.jpajtatx.entity.sequence.Employee();
+		sequenceEmployee.setId( theEmployee.getId() );
+		sequenceEmployee.setFirstName( theEmployee.getFirstName() );
+		sequenceEmployee.setLastName( theEmployee.getLastName() );
+		sequenceEmployee.setEmail( theEmployee.getEmail() );
+		
 		employeeMariadbService.save( theEmployee );
 		employeeMysqlService.save( theEmployee );
-		employeeOracleService.save( theEmployee );
+		employeeOracleService.save( sequenceEmployee );
 	}
 
 	@Override

@@ -2,7 +2,7 @@ package com.jsmile.springboot.jpajtatx.dao.slave;
 
 import java.util.List;
 
-import com.jsmile.springboot.jpajtatx.entity.Employee;
+import com.jsmile.springboot.jpajtatx.entity.identity.Employee;
 
 public interface EmployeeMysqlDAO {
 

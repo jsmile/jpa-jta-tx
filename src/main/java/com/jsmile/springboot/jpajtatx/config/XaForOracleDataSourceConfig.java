@@ -32,7 +32,7 @@ import lombok.extern.slf4j.Slf4j;
 		, entityManagerFactoryRef = "xaOracleEntityManagerFactory" 
 		, transactionManagerRef = "multiTxManager" 
 )
-@EntityScan( "com.jsmile.springboot.jpajtatx.entity" )
+@EntityScan( "com.jsmile.springboot.jpajtatx.entity.sequence" )
 //@EntityScan 시에
 //모든 DBMS가 동일한 DB 스키마를 가졌다고 가정
 //만일 DBMS 마다 DB 스키마가 다르다면 별도의 package 로 구성해야 함.
@@ -83,7 +83,7 @@ public class XaForOracleDataSourceConfig
 		entityManager.setDataSource( xaForOracleDataSource() );
 		entityManager.setJpaVendorAdapter( jpaVendorAdapter );
 //		entityManager.setPackagesToScan( "kr.co.within.goodchoice.user.jta.domain.legacy" );
-		entityManager.setPackagesToScan( "com.jsmile.springboot.jpajtatx.entity" );
+		entityManager.setPackagesToScan( "com.jsmile.springboot.jpajtatx.entity.sequence" );
 		entityManager.setPersistenceUnitName( "oracleEntityManager" );
 		entityManager.setJpaProperties( props );
 

@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jsmile.springboot.jpajtatx.dao.master.EmployeeMariadbDAO;
 import com.jsmile.springboot.jpajtatx.dao.slave.EmployeeMysqlDAO;
 import com.jsmile.springboot.jpajtatx.dao.slave.EmployeeOracleDAO;
-import com.jsmile.springboot.jpajtatx.entity.Employee;
+import com.jsmile.springboot.jpajtatx.entity.sequence.Employee;
 
 @Service
 public class EmployeeOracleServiceImpl implements EmployeeOracleService

@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.jsmile.springboot.jpajtatx.dao.master.EmployeeMariadbDAO;
-import com.jsmile.springboot.jpajtatx.entity.Employee;
+import com.jsmile.springboot.jpajtatx.entity.identity.Employee;
 
 @Service
 public class EmployeeMariadbServiceImpl implements EmployeeMariadbService

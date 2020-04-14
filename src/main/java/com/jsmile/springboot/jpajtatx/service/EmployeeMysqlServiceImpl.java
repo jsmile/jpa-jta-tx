@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.jsmile.springboot.jpajtatx.dao.master.EmployeeMariadbDAO;
 import com.jsmile.springboot.jpajtatx.dao.slave.EmployeeMysqlDAO;
-import com.jsmile.springboot.jpajtatx.entity.Employee;
+import com.jsmile.springboot.jpajtatx.entity.identity.Employee;
 
 @Service
 public class EmployeeMysqlServiceImpl implements EmployeeMysqlService

@@ -1,19 +1,23 @@
-package com.jsmile.springboot.jpajtatx.entity;
+package com.jsmile.springboot.jpajtatx.entity.sequence;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table( name = "employee" )
 public class Employee
 {
+
 	// define fields
+
 	@Id
-	@GeneratedValue( strategy = GenerationType.IDENTITY )
+	@GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "S_MY_SEQ" )
+	@SequenceGenerator( name = "S_MY_SEQ", sequenceName = "employee_seq", initialValue = 5 )
 	@Column( name = "id" )
 	private int id;
 
@@ -27,7 +31,11 @@ public class Employee
 	private String email;
 
 	// define constructors
-	public Employee() { }
+
+	public Employee()
+	{
+
+	}
 
 	public Employee( String firstName, String lastName, String email )
 	{

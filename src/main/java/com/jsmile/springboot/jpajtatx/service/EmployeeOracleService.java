@@ -2,7 +2,7 @@ package com.jsmile.springboot.jpajtatx.service;
 
 import java.util.List;
 
-import com.jsmile.springboot.jpajtatx.entity.Employee;
+import com.jsmile.springboot.jpajtatx.entity.sequence.Employee;
 
 public interface EmployeeOracleService
 {
