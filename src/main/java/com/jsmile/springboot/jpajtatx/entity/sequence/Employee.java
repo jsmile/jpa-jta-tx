@@ -17,7 +17,8 @@ public class Employee
 
 	@Id
 	@GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "S_MY_SEQ" )
-	@SequenceGenerator( name = "S_MY_SEQ", sequenceName = "employee_seq", initialValue = 5 )
+//	@SequenceGenerator( name = "S_MY_SEQ", sequenceName = "employee_seq", initialValue = 5 )
+	@SequenceGenerator( name = "S_MY_SEQ", sequenceName = "employee_seq", allocationSize = 1, initialValue = 5 )
 	@Column( name = "id" )
 	private int id;
 

@@ -1,0 +1,2 @@
+{"id":"10.0.75.1.tm158687956395600002","wasCommitted":false,"participants":[{"uri":"10.0.75.1.tm3","state":"TERMINATED","expires":1586879573925,"resourceName":"xaOracleDataSource01"}]}
+{"id":"10.0.75.1.tm158687956382400001","wasCommitted":false,"participants":[{"uri":"10.0.75.1.tm1","state":"TERMINATED","expires":1586879573939,"resourceName":"xaMariadbDataSource01"},{"uri":"10.0.75.1.tm2","state":"TERMINATED","expires":1586879573939,"resourceName":"xaMysqlDataSource01"}]}

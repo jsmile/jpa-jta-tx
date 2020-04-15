@@ -53,7 +53,11 @@ public class TxEmployeeServiceImpl implements TxEmployeeService
 	public void save( Employee theEmployee ) throws RuntimeException
 	{
 		com.jsmile.springboot.jpajtatx.entity.sequence.Employee sequenceEmployee = new com.jsmile.springboot.jpajtatx.entity.sequence.Employee();
-		sequenceEmployee.setId( theEmployee.getId() );
+		System.out.println( "\n#######################################" );
+		System.out.println( "########## theEmployee.getId() : *" + theEmployee.getId() );
+		System.out.println( "#######################################" );
+
+		sequenceEmployee.setId( 0 );
 		sequenceEmployee.setFirstName( theEmployee.getFirstName() );
 		sequenceEmployee.setLastName( theEmployee.getLastName() );
 		sequenceEmployee.setEmail( theEmployee.getEmail() );
