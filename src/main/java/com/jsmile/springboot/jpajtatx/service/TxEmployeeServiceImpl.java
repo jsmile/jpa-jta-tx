@@ -20,8 +20,6 @@ public class TxEmployeeServiceImpl implements TxEmployeeService
 	private EmployeeMariadbService employeeMariadbService;
 	@Autowired
 	private EmployeeMysqlService employeeMysqlService;
-	@Autowired
-	private EmployeeOracleService employeeOracleService;	
 
 	@Override
 	@Transactional( readOnly = true, propagation = Propagation.REQUIRED, transactionManager = "multiTxManager" )
@@ -54,7 +52,6 @@ public class TxEmployeeServiceImpl implements TxEmployeeService
 	{
 		employeeMariadbService.save( theEmployee );
 		employeeMysqlService.save( theEmployee );
-		employeeOracleService.save( theEmployee );
 	}
 
 	@Override
@@ -63,7 +60,6 @@ public class TxEmployeeServiceImpl implements TxEmployeeService
 	{
 		employeeMariadbService.deleteById( theId );
 		employeeMysqlService.deleteById( theId );
-		employeeOracleService.deleteById( theId );
 	}
 
 }
